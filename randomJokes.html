@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 80%;
+        min-height: 100px;
+        /* border: 1px solid #000; */
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .jokes {
+        width: 500px;
+        min-height: 100px;
+        border: 1px solid lightgray;
+        box-shadow: 0px 10px 5px gray;
+        margin-top: 190px;
+      }
+      .jokes p {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jokes">
+        <p id="jokes">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea vitae
+          nihil vel qui. Quasi obcaecati, facere porro modi eveniet quidem?
+        </p>
+      </div>
+    </div>
+    <script src="js/randomJokes.js"></script>
+  </body>
+</html>

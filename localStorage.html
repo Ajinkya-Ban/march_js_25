@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 500px;
+        min-height: 100px;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 120px auto;
+        flex-direction: column;
+        padding: 10px;
+      }
+      tr,
+      td {
+        padding-top: 10px;
+      }
+      input {
+        padding: 5px;
+      }
+      .btn-reg {
+        margin-bottom: 5px;
+        padding: 5px;
+        width: 190px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Create new account</h1>
+      <div class="table-data">
+        <form id="regi">
+          <table>
+            <tr>
+              <td>
+                <label for="name">Full Name</label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter Fullname"
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="name">Enter Email</label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Enter Email"
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="name">Enter mobile</label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="mob"
+                  placeholder="Enter mobile"
+                  autocomplete="off"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <button type="submit" class="btn-reg">Register</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>

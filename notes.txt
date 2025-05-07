@@ -1,0 +1,178 @@
+DOM in javascript
+=========================
+1. The javascript HTML DOM(Document object model) is powerful tool that represent the structure of html document.
+2. It allows javascript to interact with html element.
+3. The javascript HTML DOM is an interface between your browser and html.
+4. Using javascript developers can access, edit, modify, delete the html elemetn dynamically.
+
+Q. What are the basic properties of DOM?
+===============================================
+1. document:
+-------------------
+This method returns html contents like head and all body elements.
+
+2. document.all:
+----------------------
+This method returns the html element in array format. You can easily point out perticular node using index.
+
+3. document.images:
+------------------------
+This method print all the images which present in webpage.
+
+4. links:
+--------------------
+This method can be used for to print all the anchor tag which are present in webpage.
+
+5. forms:
+----------------------
+
+6. URL
+7. baseURI
+8. domain
+
+
+how we can target html element using getAttribute and setAttribute()?
+----------------------------------------------------------------------------
+1. getAttribute():
+    a) innerHTML
+    b) innerText
+    c) getAttributeNode
+
+2. setAttribute():
+    a) innerHTML
+    b) innerText
+    c) removeAttribute
+    d) setAttribute
+
+You can also add css class using the method called classList. In that add property called add(). 
+add() can be used to add one or more css class in our html document.
+You can also remove the class using the method classList.remove.
+
+
+
+Q. what is mean by querySelector and querySelectorAll()?
+=========================================================================
+querySelector : This method matches the first class and print on console.
+querySelectorAll : This method matches all same class under the parent and print on console.
+
+
+Q. What are the different methods of traversal DOM?
+-----------------------------------------------------------------
+Def : The process of navigating between element of DOM is called as traversal.
+
+The following are some traversal methods.
+----------------------------------------------------
+1. parentNode
+2. parentElement
+3. children
+4. firstChild
+5. lastChild
+6. firstElementChild
+7. lastElementChild
+8. childNodes
+9. nextSibling
+10. previousSibling
+
+====================================================================================================
+LocalStorage and SessionStorage
+==================================
+LocalStorage :
+---------------------
+- javascript LocalStorage is a feature that lets you store the data in your browser using key value pair.
+- The data stays saved even after you close the browser, so it can be used again when you open the browser.
+
+Syntax
+-----------
+variable_name = localStorage;
+
+Q. What are the key features of localStorage?
+========================================================
+1. Origin-Bound Storage:
+-------------------------------
+Data is stored per domain and is not shared across different domain.
+
+2. Persistant Storage:
+-------------------------------
+Data remains save even after when you close the browser or os is rebooted. It will be avilable until manually cleared.
+
+3. Storage Limit:
+--------------------------------
+The Storage limit of localStorage is 5mb. Which is greater then 4mb limit of cookies.
+
+
+Q. What are the basic operations with localStorage?
+------------------------------------------------------------
+1. Storing Data in localStorage:
+-------------------------------------
+- If you want to store the data into localStorage we use the method called as setItem() method.
+- The setItem() method required two argument that is first is key that denote for which key the data will be  stored second is that value which is stored agaiest the key.
+
+Syntax:
+-----------------
+localStorage.setItem('key', 'value')
+
+2. Retriving Data from localStorage:
+----------------------------------------
+- If you want to get the data from localStorage we use the method called as getItem() method.
+- This method takes a key as an argument and return the associated value.
+- If the key is not avilable then it will return null.
+
+
+3. Removing Data from localStorage:
+------------------------------------------
+To remove the data from localStorage we use the method removeItem() method.
+This method accepts key as argument.
+
+
+Syntax:
+------------
+localStorage.removeItem('key')
+
+
+4. clear data from localStorage:
+-----------------------------------------
+If you want to claer all data stored in localStorage use the clear() method.
+This will remove all key- value pairs stored in the localStorage for the current domain.
+
+Syntax:
+-----------------
+localStorage.clear()
+
+Example:
+-----------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>LocalStorage</h1>
+
+    <script type="text/javascript">
+      localStorage.setItem("name", "Yogesh Kumar");
+      localStorage.setItem("color", "white");
+
+      let getName = localStorage.getItem("name11");
+      console.log(getName);
+
+      let totl_ele = localStorage.length;
+      console.log("Total number of element is = ", totl_ele);
+
+      //   localStorage.removeItem("color");
+
+      //   localStorage.clear();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
