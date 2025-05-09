@@ -10,6 +10,10 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css"
+    />
 
     <style>
       * {
@@ -18,15 +22,16 @@
         box-sizing: border-box;
       }
       .box {
-        width: 600px;
+        width: 60%;
         min-height: 100px;
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         display: flex;
         /* justify-content: center;
         align-items: center; */
         margin: 30px auto;
         flex-direction: column;
         padding: 10px;
+        box-shadow: 5px 15px 8px gray;
       }
       tr,
       td {
@@ -66,7 +71,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="loadCursor()">
     <div class="box">
       <h1 class="text-center font-monospace">Create new account</h1>
       <div class="table-data">
@@ -83,6 +88,52 @@
                   placeholder="Enter Fullname"
                   autocomplete="off"
                 />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="name">Gender</label>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="radioDefault1"
+                    value="male"
+                  />
+                  <label class="form-check-label" for="radioDefault1">
+                    Male
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="radioDefault1"
+                    value="female"
+                  />
+                  <label class="form-check-label" for="radioDefault1">
+                    Female
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="radioDefault1"
+                    value="other"
+                  />
+                  <label class="form-check-label" for="radioDefault1">
+                    Other
+                  </label>
+                </div>
               </td>
             </tr>
 
@@ -115,10 +166,64 @@
             </tr>
 
             <tr>
+              <td>
+                <label for="name">Select hobbies</label>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="Reading"
+                    name="hobby"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Reading</label
+                  >
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="Cooking"
+                    name="hobby"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Cooking</label
+                  >
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="Travelling"
+                    name="hobby"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Travelling</label
+                  >
+                </div>
+              </td>
+            </tr>
+
+            <tr>
               <td></td>
               <td>
                 <button type="submit" class="btn btn-success btn-reg">
-                  Register
+                  <i class="bi bi-person-add"></i> Register
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-warning btn-reg"
+                  onclick="clearFields()"
+                >
+                  <i class="bi bi-trash"></i> Clear
                 </button>
               </td>
             </tr>
@@ -130,9 +235,12 @@
         <table class="table" id="userTable">
           <thead>
             <tr>
+              <th>Sr.No</th>
               <th>Name</th>
+              <th>Gender</th>
               <th>Email</th>
               <th>Mobile</th>
+              <th>Hobbies</th>
               <th>Action</th>
             </tr>
           </thead>
